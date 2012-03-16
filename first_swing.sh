@@ -5,19 +5,18 @@ start() {
 
 	RUBY_VER="1.9.3"
 
-	#	install_pkg "curl"
-	#	install_pkg "git"
-	#	install_rvm
+		install_pkg "curl"
+		install_pkg "git"
+		install_rvm
 		rvm_load_function
-	#	rvm_install_ver 1.8.7	
-	#	rvm_install_ver $RUBY_VER
-	#	rvm_use_ver "$RUBY_VER@$HOSTNAME"
-	#	gemrc_suppress_doc
-	#	install_thor
-                pull_github_tasks
-		thor_create_thor_dir
-#		thor_create_example_task
-#		run_example_task
+		rvm_install_ver 1.8.7	
+		rvm_install_ver $RUBY_VER
+		rvm_use_ver "$RUBY_VER@$HOSTNAME"
+		gemrc_suppress_doc
+		install_thor
+		thor_create_example_task
+		run_example_task
+		thor_install_example_task
 }
 
 
@@ -82,7 +81,38 @@ install_thor() {
 }
 
 
-thor_create_thor_dir() {
-	thor -T	
+
+thor_create_example_task() {
+echo "Creatiing example speak thor file"
+	cat >> test.thor <<EOF
+class Test < Thor
+  desc "example FILE", "an example task"
+  method_option :delete, :aliases => "-d", :desc => "Delete the file after parsing it"
+  def example(file)
+    puts "You supplied the file: #{file}"
+    delete_file = options[:delete]
+    if delete_file
+      puts "You specified that you would like to delete #{file}"
+    else
+      puts "You do not want to delete #{file}"
+    end
+  end
+end
+EOF
+}
+
+
+run_example_task() {
+
+echo "Running example speak task"
+thor test:example test.txt
+}
+
+
+
+thor_install_example_task() {
+echo "Installing example speak task into system thor"
+thor install test.thor
+
 }
 start
