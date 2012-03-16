@@ -84,7 +84,7 @@ install_thor() {
 
 
 thor_create_example_task() {
-echo "Creatiing example speak thor file"
+echo "Creating example test.thor file"
 	cat >> test.thor <<EOF
 class Test < Thor
   desc "example FILE", "an example task"
@@ -105,7 +105,7 @@ EOF
 
 run_example_task() {
 
-echo "Running example speak task"
+echo "Running example task"
 thor test:example test.txt
 }
 
@@ -113,7 +113,7 @@ thor test:example test.txt
 
 thor_install_example_task() {
 echo "Installing example task into system tasks (so you can run command from any dir)"
-thor install test.thor
+thor install test.thor --as=test.thor
 
 }
 
