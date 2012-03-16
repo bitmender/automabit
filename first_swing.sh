@@ -17,6 +17,7 @@ start() {
 		thor_create_example_task
 		run_example_task
 		thor_install_example_task
+		thor_delete_example_task_file
 }
 
 
@@ -111,8 +112,16 @@ thor test:example test.txt
 
 
 thor_install_example_task() {
-echo "Installing example speak task into system thor"
+echo "Installing example task into system tasks (so you can run command from any dir)"
 thor install test.thor
 
 }
+
+
+thor_delete_example_task_file() {
+echo "Removing unneeded test.thor file created earlier."
+rm test.thor
+}
+
 start
+
