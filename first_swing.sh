@@ -9,7 +9,6 @@ start() {
 		install_pkg "git"
 		install_rvm
 		rvm_load_function
-		rvm_install_ver 1.8.7	
 		rvm_install_ver $RUBY_VER
 		rvm_use_ver "$RUBY_VER@$HOSTNAME"
 		gemrc_suppress_doc
