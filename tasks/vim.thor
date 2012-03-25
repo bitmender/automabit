@@ -8,7 +8,7 @@ File.dirname(__FILE__)
 	end
 
 
-	desc "setup", "install and setup vim"
+	desc "setup", "install and setup vim to use pathogen"
 	def setup
 
 	invoke "system:install", ["vim"]
@@ -22,7 +22,7 @@ File.dirname(__FILE__)
 	template('templates/vimrc.erb', "~/.vimrc")
 	end 
 
-	desc "add_rails_support", "add rails.vim support courtesy of Tim Pope"
+	desc "add_rails_support", "add rails.vim support"
 	def add_rails_support
 	add_bundle "git://github.com/tpope/vim-rails.git"
 	add_bundle "https://github.com/scrooloose/nerdtree.git"
