@@ -6,15 +6,15 @@ This is a *personal* project (Read: not production ready... but ready for feedba
 
 Running first_swing.sh on a *fresh* Ubuntu-ish install should bootstrap all packages and settings necessary to get the automabit functional. 
 
-Afterwards the following thor tasks should be available:
+Afterwards the following thor tasks should be available (if you clone/install these tasks):
+
+
+
 
 system
 ------
-thor system:install  # use sudo apt-get to install system package
-
-test
-----
-thor test:example FILE  # an example task
+thor system:install     # use sudo apt-get to install system package
+thor system:update_all  # apt-get update, upgrade, and dist-upgrade
 
 vim
 ---
@@ -23,8 +23,5 @@ thor vim:add_git_support      # add git fugitive support
 thor vim:add_rails_support    # add rails.vim support
 thor vim:create_vimrc         # create ~/.vimrc with template
 thor vim:setup                # install and setup vim to use pathogen
-
-
-
 
 
