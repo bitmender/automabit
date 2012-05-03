@@ -13,5 +13,10 @@ class Ubuntu < Thor
   def update_all
     system "sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade"
   end
+
+  desc "get_daily_server_cd", "download the current daily Ubuntu server cd"
+  def get_daily_server_cd 
+    system "curl -v -o ~/Download/precide-server-amd64.iso http://cdimage.ubuntu.com/ubuntu-server/daily/current/precise-server-amd64.iso"
+  end
 end
 
