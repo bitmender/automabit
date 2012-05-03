@@ -17,6 +17,7 @@ start() {
 		run_example_task
 		thor_install_example_task
 		thor_delete_example_task_file
+                explain_next_steps
 }
 
 
@@ -119,7 +120,18 @@ thor install test.thor --as=test.thor
 
 thor_delete_example_task_file() {
 echo "Removing unneeded test.thor file created earlier."
+thor uninstall test.thor
 rm test.thor
+}
+
+explain_next_steps() {
+echo "Bootstrap is complete."
+echo "To install automabit's thor files:"
+echo "git clone https://github.com/bitmender/automabit.git"
+echo "cd automabit/tasks"
+echo "thor install <taskname>.thor"
+
+echo "\nOtherwise, just start creating/importing your own thor files."
 }
 
 start
