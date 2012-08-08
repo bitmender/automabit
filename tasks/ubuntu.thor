@@ -3,10 +3,8 @@ class Ubuntu < Thor
   namespace :system
   desc "install", "use sudo apt-get to install system package"
   def install(package)
-    package.each do |p| 
-      puts "Installing via system: #{p}"
-      system "sudo apt-get install #{p}"
-    end
+      puts "Installing via system: #{package}"
+      system "sudo apt-get install #{package}"
   end
 
   desc "update_all", "apt-get update, upgrade, and dist-upgrade"
