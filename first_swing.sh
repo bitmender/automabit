@@ -3,7 +3,7 @@
 
 start() { 
 
-	RUBY_VER="1.9.3"
+	RUBY_VER="ruby"
 
 		install_pkg "curl"
 		install_pkg "git"
