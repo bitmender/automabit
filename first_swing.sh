@@ -37,10 +37,10 @@ install_rvm() {
 }
 
 rvm_load_function() {
-	\# Load RVM into a shell session *as a function*
+	# Load RVM into a shell session *as a function*
 	if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then
 
-		\# First try to load from a user install
+		# First try to load from a user install
 		source "$HOME/.rvm/scripts/rvm"
 
 	elif [[ -s "/usr/local/rvm/scripts/rvm" ]] ; then
