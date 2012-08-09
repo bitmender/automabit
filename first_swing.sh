@@ -70,8 +70,8 @@ rvm_use_ver() {
 gemrc_suppress_doc() {
 	echo "Disabling rdoc/ri generation in ~/.gemrc"
 	cat >> ~/.gemrc <<EOF
-	install: --no-rdoc --no-ri
-	update: --no-rdoc --no-ri
+install: --no-rdoc --no-ri
+update: --no-rdoc --no-ri
 EOF
 }
 
