@@ -4,10 +4,19 @@
 This is a *personal* project (Read: not production ready... but ready for feedback to continually improve.)
 
 
+*** RVM Install is currently note setup to match install notes below ***
+
+
+For the brave/foolish at heart:
+
+curl -L https://raw.github.com/bitmender/automabit/master/first_swing.sh | bash
+
+(Alternatively, download https://raw.github.com/bitmender/automabit/master/first_swing.sh, review file and execute with bash). 
+
+
 Running first_swing.sh on a *fresh* Ubuntu-ish install should bootstrap all packages and settings necessary to get the automabit functional. 
 
-Afterwards the following thor tasks should be available (if you clone/install these tasks):
-
+Afterwards the following thor tasks should be available (assuming you clone/install these tasks):
 
 
 
@@ -24,4 +33,13 @@ thor vim:add_rails_support    # add rails.vim support
 thor vim:create_vimrc         # create ~/.vimrc with template
 thor vim:setup                # install and setup vim to use pathogen
 
+Basic Steps in getting thor installed on barebones ubuntu.
+
+1.) Install RVM dependencies (curl, git)
+2.) Install RVM
+3.) Append RVM created .bash_login to .profile, rm .bash_login (This seems like a tricky bug.... .profile takes precedence over .bash_login so .bash_login never gets called.  Is there any potential harm in us moving over to the .profile? - none personally experienced.)
+4.) Install ruby instance (latest by default)
+5.) create and use rvm gemset
+6.) gem install thor
+7.) thor list to see avail tasks 
 

@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 require "thor"
 
 class Trackpad < Thor
@@ -40,4 +38,3 @@ class Trackpad < Thor
   end
 end
 
-Trackpad.start
