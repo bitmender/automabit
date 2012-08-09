@@ -43,6 +43,7 @@ rvm_install_ver() {
 
 rvm_use_ver() {
 	echo "Setting up RVM gemset: $1"
+	source ~/.profile
 	rvm use --install --create --default $1
 }
 
