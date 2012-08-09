@@ -77,7 +77,7 @@ EOF
 
 install_thor() {
 	echo "Installing thor gem."
-gem install thor
+	gem install thor
 }
 
 explain_next_steps() {
