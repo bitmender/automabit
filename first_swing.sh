@@ -51,7 +51,7 @@ gemrc_suppress_doc() {
 	cat >> ~/.gemrc <<EOF
 	install: --no-rdoc --no-ri
 	update: --no-rdoc --no-ri
-	EOF
+EOF
 }
 
 install_thor() {
@@ -65,8 +65,8 @@ explain_next_steps() {
 	echo "git clone https://github.com/bitmender/automabit.git"
 	echo "cd automabit/tasks"
 	echo "thor install <taskname>.thor"
-
-	echo "\nOtherwise, just start creating/importing your own thor files."
+	echo ""
+	echo "Otherwise, just start creating/importing your own thor files."
 }
 
 start
